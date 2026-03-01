@@ -1,6 +1,14 @@
 [package]
 name = "bbqio"
-version = "0.1.0"
+version = "0.0.0"
 edition = "2024"
+description = "embedded_io_async wrappers for bbqueue"
+readme = "README.md"
+repository = "https://github.com/tommasoclini/bbqio.git"
+license = "MIT"
+keywords = ["bbqueue", "embedded", "embedded-io-async"]
+categories = ["embedded", "no-std", "no-std::no-alloc"]
 
 [dependencies]
+bbqueue = "0.6.2"
+embedded-io-async = "0.7.0"
