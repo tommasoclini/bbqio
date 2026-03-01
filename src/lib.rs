@@ -6,6 +6,12 @@
 
 #![cfg_attr(not(test), no_std)]
 
+#[cfg(feature = "io_v0-7")]
+use embedded_io_async_v0_7 as embedded_io_async;
+
+#[cfg(feature = "io_v0-6")]
+use embedded_io_async_v0_6 as embedded_io_async;
+
 use bbqueue::{
     prod_cons::stream::{StreamConsumer, StreamProducer},
     traits::{bbqhdl::BbqHandle, notifier::AsyncNotifier},

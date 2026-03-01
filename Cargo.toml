@@ -11,4 +11,10 @@ categories = ["embedded", "no-std", "no-std::no-alloc"]
 
 [dependencies]
 bbqueue = "0.6.2"
-embedded-io-async = "0.7.0"
+embedded-io-async-v0-6 = { package = "embedded-io-async", version = "0.6.1", optional = true }
+embedded-io-async-v0-7 = { package = "embedded-io-async", version = "0.7.0", optional = true }
+
+[features]
+default = ["io_v0-7"]
+io_v0-6 = ["dep:embedded-io-async-v0-6"]
+io_v0-7 = ["dep:embedded-io-async-v0-7"]
